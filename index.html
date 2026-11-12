@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es-PY">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+ <meta name="theme-color" content="#11231d" />
+ <meta name="description" content="Py'aguapy: un espacio de escucha, reflexión bíblica y oración en español y guaraní paraguayo." />
+ <title>Py'aguapy — Un espacio de fe</title>
+ <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+ <link rel="stylesheet" href="/styles.css" />
+ <script src="/app.js" defer></script>
+</head>
+<body>
+ <div class="app-shell">
+  <aside class="sidebar" id="sidebar" aria-label="Navegación">
+   <div class="brand"><img src="/assets/logo.svg" alt="" width="43" height="43" /><div><div class="brand-name">Py'aguapy<span class="brand-mark">✦</span></div><div class="brand-tag" data-i18n="brandTag">UN ESPACIO DE FE</div></div></div>
+   <button class="new-chat" id="newChat"><span class="plus">＋</span><span data-i18n="newChat">Nueva conversación</span><span class="new-arrow">↗</span></button>
+   <div class="nav-label" data-i18n="yourSpace">TU ESPACIO</div>
+   <nav class="nav-main" aria-label="Secciones">
+    <button class="nav-item active" data-view="chat"><span class="nav-icon">◫</span><span data-i18n="navChat">Conversar</span></button>
+    <button class="nav-item" data-view="prayer"><span class="nav-icon">✧</span><span data-i18n="navPrayer">Oración guiada</span></button>
+    <button class="nav-item" data-view="bible"><span class="nav-icon">▤</span><span data-i18n="navBible">Pasajes bíblicos</span></button>
+   </nav>
+   <div class="sidebar-bottom">
+    <div class="sidebar-verse"><span class="tiny-kicker" data-i18n="todayText">PARA HOY</span><p data-i18n="sidebarQuote">La paz también comienza con una conversación.</p><span>— <span data-i18n="reflection">Reflexión</span></span></div>
+    <div class="sidebar-footer"><span class="dot"></span><span data-i18n="beta">Versión beta · Paraguay</span></div>
+   </div>
+  </aside>
+
+  <main class="workspace" id="workspace">
+   <header class="topbar">
+    <div class="topbar-left"><button class="mobile-menu icon-button" id="menuButton" aria-label="Abrir menú">☰</button><span class="breadcrumb" data-i18n="headerTitle">Un lugar para hablar y reflexionar</span></div>
+    <div class="topbar-right"><span class="online" aria-label="Servicio disponible"><span class="online-dot"></span><span data-i18n="here">Aquí para escucharte</span></span><div class="language-selector"><span class="globe">◎</span><select id="language" aria-label="Idioma"><option value="es">Español</option><option value="gn">Avañe’ẽ</option></select><span class="select-arrow">⌄</span></div></div>
+   </header>
+   <div class="chat-stage" id="chatStage">
+    <div class="chat-scroll" id="chatScroll">
+     <div class="welcome" id="welcome">
+      <div class="halo" aria-hidden="true"><div class="halo-ring halo-ring-a"></div><div class="halo-ring halo-ring-b"></div><div class="sun-symbol">✳</div></div>
+      <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="welcomeEyebrow">UN MOMENTO PARA EL ALMA</span><span class="eyebrow-line"></span></div>
+      <h1 id="welcomeTitle" data-i18n="welcomeTitle">No tienes que cargar<br><em>con todo a solas.</em></h1>
+      <p class="welcome-sub" data-i18n="welcomeSubtitle">Un espacio de calma para compartir lo que sientes, encontrar reflexión en la Biblia y acercarte a Dios en oración.</p>
+      <div class="suggestions" id="suggestions"></div>
+      <div class="gentle-note"><span>✧</span><span data-i18n="welcomeNote">Puedes comenzar con una pregunta, una preocupación o simplemente un «hola».</span></div>
+     </div>
+     <div class="messages" id="messages" aria-live="polite" aria-relevant="additions"></div>
+    </div>
+    <div class="composer-area">
+     <form class="composer" id="chatForm"><textarea id="messageInput" rows="1" maxlength="1800" aria-label="Tu mensaje" data-placeholder-es="Escribe lo que llevas en el corazón..." data-placeholder-gn="Ehai ko’ápe pe reñandúva..." placeholder="Escribe lo que llevas en el corazón..."></textarea><div class="composer-bottom"><div class="composer-left"><span class="composer-sparkle">✣</span><span data-i18n="composerHelp">Sin historial guardado en esta versión</span></div><button type="submit" class="send-button" id="sendButton" aria-label="Enviar mensaje"><span>↑</span></button></div></form>
+     <p class="disclaimer" data-i18n="disclaimer">Py'aguapy es una IA de reflexión cristiana, no es Dios ni transmite mensajes divinos. No reemplaza ayuda profesional ni pastoral. Con IA activa, tus mensajes se envían al proveedor.</p>
+    </div>
+   </div>
+  </main>
+  <aside class="insights" aria-label="Inspiración bíblica">
+   <div class="insight-top"><span data-i18n="inspiration">INSPIRACIÓN DIARIA</span><span class="starlet">✳</span></div>
+   <div class="insight-hero"><div class="insight-ornament" aria-hidden="true">✦</div><span class="insight-pill" data-i18n="verseDay">Versículo para hoy</span><h2 data-i18n="verseTitle">Un camino de <em>confianza.</em></h2><p data-i18n="verseSummary">En el Salmo 23, la imagen del pastor nos recuerda el valor del cuidado y la compañía en la incertidumbre.</p><div class="insight-ref">SALMOS 23:1–4 <span>↗</span></div></div>
+   <div class="divider-line"></div>
+   <div class="why-section"><div class="why-icon">✧</div><h3 data-i18n="sectionTitle">Un momento para ti.</h3><p data-i18n="sectionDesc">A veces, poner en palabras lo que sentimos ya es el primer paso. Aquí puedes hacerlo a tu ritmo.</p></div>
+   <div class="privacy-card"><span class="privacy-icon">♧</span><div><strong data-i18n="privacyTitle">Tu privacidad importa</strong><p data-i18n="privacyDesc">Este prototipo no guarda tus conversaciones en una cuenta.</p></div></div>
+   <div class="right-footer" data-i18n="rightFooter">Hecho para Paraguay · Español + Guaraní</div>
+  </aside>
+ </div>
+ <div id="mobileShade" class="mobile-shade" hidden></div>
+</body>
+</html>
